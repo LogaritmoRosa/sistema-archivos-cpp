@@ -27,6 +27,8 @@ public:
 	Node* getChild(int index);
 
 	void printChildren();
+
+	Node* findChild(const string& name);
 private:
 	string m_name;
 	bool m_type;

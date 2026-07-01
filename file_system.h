@@ -16,6 +16,10 @@ public:
 
 	void pwd();
 	void ls();
+
+	void mkdir(const string& name);
+	void touch(const string& name);
+	void cd(const string& name);
 private:
 	Node* m_root;
 	Node* m_current;

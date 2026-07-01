@@ -35,3 +35,25 @@ void Node::printChildren()
 		it++;
 	}
 }
+
+Node* Node::findChild(const string& name)
+{
+	vector<Node*>::iterator it = m_inside.begin();
+	bool found = false;
+
+	while (it != m_inside.end() && !found)
+	{
+		if (name == (*it)->getName())
+		{
+			found = true;
+		}
+		else
+			it++;
+
+	}
+
+	if (found)
+		return *it;
+	else
+		return nullptr;
+}
