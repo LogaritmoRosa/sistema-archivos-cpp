@@ -8,17 +8,57 @@ int main()
 {
 	FileSystem fs;
 
-	fs.mkdir("new_dir");
-	fs.touch("new_file");
+	string command;
 
-	fs.pwd();
-	fs.ls();
+	while (true)
+	{
+		std::cout << "> ";
+		std::cin >> command;
 
-	fs.cd("new_dir");
-	fs.pwd();
+		if (command == "ls")
+		{
+			fs.ls();
+		}
+		else if (command == "pwd")
+		{
+			fs.pwd();
+		}
+		else if (command == "mkdir")
+		{
+			string name;
 
-	fs.cd("..");
-	fs.pwd();
+			std::cin >> name;
+
+			fs.mkdir(name);
+
+		}
+		else if (command == "touch")
+		{
+			string name;
+
+			std::cin >> name;
+
+			fs.touch(name);
+
+		}
+		else if (command == "cd")
+		{
+			string name;
+
+			std::cin >> name;
+
+			fs.cd(name);
+
+		}
+		else if (command == "exit")
+		{
+			break;
+		}
+		else
+		{
+			std::cout << "command not found" << std::endl;
+		}
+	}
 
 	return 0;
 }
