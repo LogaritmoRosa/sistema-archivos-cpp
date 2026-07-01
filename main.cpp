@@ -8,5 +8,8 @@ int main()
 {
 	FileSystem fs;
 
+	fs.pwd();
+	fs.ls();
+
 	return 0;
 }

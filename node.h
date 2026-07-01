@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <vector>
 
@@ -23,6 +25,8 @@ public:
 
 	void addInside(Node* child);
 	Node* getChild(int index);
+
+	void printChildren();
 private:
 	string m_name;
 	bool m_type;
