@@ -52,7 +52,7 @@ void FileSystem::cd(const string& name)
 	{
 		Node* target = m_current->findChild(name);
 
-		if (target != nullptr && target->getType() == true)
+		if (target != nullptr && target->getType())
 		{
 			m_current = target;
 		}
@@ -60,4 +60,12 @@ void FileSystem::cd(const string& name)
 			std::cout << "directory not found" << std::endl;
 	}
 
+}
+
+void FileSystem::rm(const string& name)
+{
+	bool succes = m_current->removeChild(name);
+
+	if (!succes)
+		std::cout << "no such file or directory" << std::endl;
 }

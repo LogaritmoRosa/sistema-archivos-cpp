@@ -57,3 +57,24 @@ Node* Node::findChild(const string& name)
 	else
 		return nullptr;
 }
+
+bool Node::removeChild(const string& name)
+{
+	vector<Node*>::iterator it = m_inside.begin();
+	bool found = false;
+
+	while (it != m_inside.end() && !found)
+	{
+		if ((*it)->getName() == name)
+		{
+			Node* target = *it;
+			m_inside.erase(it);
+			delete target;
+			found = true;
+		}
+		else
+			it++;
+	}
+
+	return found;
+}

@@ -50,6 +50,14 @@ int main()
 			fs.cd(name);
 
 		}
+		else if (command == "rm")
+		{
+			string name;
+
+			std::cin >> name;
+
+			fs.rm(name);
+		}
 		else if (command == "exit")
 		{
 			break;

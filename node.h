@@ -29,6 +29,7 @@ public:
 	void printChildren();
 
 	Node* findChild(const string& name);
+	bool removeChild(const string& name);
 private:
 	string m_name;
 	bool m_type;
