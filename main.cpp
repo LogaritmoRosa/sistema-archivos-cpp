@@ -58,6 +58,10 @@ int main()
 
 			fs.rm(name);
 		}
+		else if (command == "tree")
+		{
+			fs.tree();
+		}
 		else if (command == "exit")
 		{
 			break;

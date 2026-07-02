@@ -69,3 +69,8 @@ void FileSystem::rm(const string& name)
 	if (!succes)
 		std::cout << "no such file or directory" << std::endl;
 }
+
+void FileSystem::tree()
+{
+	m_current->printTree(0);
+}

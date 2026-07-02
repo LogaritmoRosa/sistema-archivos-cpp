@@ -78,3 +78,19 @@ bool Node::removeChild(const string& name)
 
 	return found;
 }
+
+void Node::printTree(int level)
+{
+	for (int i = 0; i < level; i++)
+		std::cout << "--";
+
+	std::cout << m_name << std::endl;
+
+	vector<Node*>::iterator it = m_inside.begin();
+
+	while (it != m_inside.end())
+	{
+		(*it)->printTree(level + 1);
+		it++;
+	}
+}

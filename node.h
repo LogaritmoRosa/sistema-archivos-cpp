@@ -30,6 +30,8 @@ public:
 
 	Node* findChild(const string& name);
 	bool removeChild(const string& name);
+
+	void printTree(int level);
 private:
 	string m_name;
 	bool m_type;

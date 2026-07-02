@@ -22,6 +22,8 @@ public:
 	void cd(const string& name);
 
 	void rm(const string& name);
+
+	void tree();
 private:
 	Node* m_root;
 	Node* m_current;
