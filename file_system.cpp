@@ -74,3 +74,13 @@ void FileSystem::tree()
 {
 	m_current->printTree(0);
 }
+
+void FileSystem::find(const string& name)
+{
+	bool success = m_current->findNode(name);
+
+	if (success)
+		std::cout << "element found" << std::endl;
+	else
+		std::cout << "element not found" << std::endl;
+}

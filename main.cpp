@@ -62,6 +62,14 @@ int main()
 		{
 			fs.tree();
 		}
+		else if (command == "find")
+		{
+			string name;
+
+			std::cin >> name;
+
+			fs.find(name);
+		}
 		else if (command == "exit")
 		{
 			break;

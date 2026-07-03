@@ -32,6 +32,8 @@ public:
 	bool removeChild(const string& name);
 
 	void printTree(int level);
+
+	bool findNode(const string& name);
 private:
 	string m_name;
 	bool m_type;

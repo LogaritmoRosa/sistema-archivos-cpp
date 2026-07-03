@@ -24,6 +24,8 @@ public:
 	void rm(const string& name);
 
 	void tree();
+
+	void find(const string& name);
 private:
 	Node* m_root;
 	Node* m_current;

@@ -94,3 +94,23 @@ void Node::printTree(int level)
 		it++;
 	}
 }
+
+bool Node::findNode(const string& name)
+{
+	if (m_name == name)
+		return true;
+
+	vector<Node*>::iterator it = m_inside.begin();
+
+	while (it != m_inside.end())
+	{
+		bool encontrado = (*it)->findNode(name);
+
+		if (encontrado)
+			return true;
+
+		it++;
+	}
+
+	return false;
+}
